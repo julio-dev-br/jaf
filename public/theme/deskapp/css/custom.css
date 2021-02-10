@@ -1,0 +1,71 @@
+/** Moldura de img utilizado na modal perm */ 
+.moldura {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+}
+
+.moldura:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+/** Estilização da mavegação principal */ 
+section {
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-btn {
+    width: 80px;
+    height: 80px;
+    text-decoration: none;
+    margin: 20px;
+    position: relative;
+    font-size: 34px;
+    border-radius: 50%;
+}
+.icon-btn::before {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.icon-btn::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 50%;
+    z-index: 0;
+}
+.my-icon .icon-btn {
+    border: 4px solid #ddd;
+    color: #031e23;
+}
+
+.my-icon .icon-btn::after {
+    background: #fff;
+    transition: 0.4s;
+}
+.my-icon .icon-btn:hover::after {
+    transform: scale(1.3);
+    opacity: 0;
+}
+.my-icon .icon-btn:hover {
+    color: #fff;
+    background: #031e23;
+    border: none;
+
+}
+
+.pointer {
+    cursor: pointer;
+}

@@ -1,0 +1,6 @@
+
+Options +FollowSymlinks
+RewriteEngine on
+rewritecond %{REQUEST_FILENAME} !-d
+rewritecond %{REQUEST_FILENAME} !-f
+rewriterule ^(.*)$ index.php [QSA,L]
